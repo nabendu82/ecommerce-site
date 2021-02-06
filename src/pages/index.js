@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Banner, BannerButton, HomeHeader } from "../utils"
 import img from '../images/bcg/homeBcg.jpg'
+import Products from "../components/HomeComponents/Products"
 
 const IndexPage = () => (
   <Layout>
@@ -12,6 +13,7 @@ const IndexPage = () => (
         <BannerButton style={{ margin: '2rem auto'}}>Shop Now</BannerButton>
       </Banner>
     </HomeHeader>
+    <Products />
   </Layout>
 )
 

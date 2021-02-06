@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Ecommerce Site`,
@@ -21,6 +25,20 @@ module.exports = {
         // Add any options here
       },
     },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.SPACE_ID,
+        accessToken: process.env.ACCESS_TOKEN,
+      },
+    },
+    {
+			resolve: 'gatsby-plugin-snipcartv3',
+			options: {
+        apiKey: process.env.SNIPCART_API,
+        autopop: true
+			}
+		},
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
