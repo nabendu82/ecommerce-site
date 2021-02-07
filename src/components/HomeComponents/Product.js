@@ -12,7 +12,7 @@ const Product = ({ product }) => {
             <div className="text">
                 <div className="product-content">
                     <h3 className="name">{name}</h3>
-                    <h3 className="price">INR {price}</h3>
+                    <h3 className="price">$ {price}</h3>
                 </div>
                 <p className="info">{description}</p>
                 <SectionButton
